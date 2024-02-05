@@ -1,6 +1,201 @@
 <!DOCTYPE html>
 <html>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.container {
+			height: 90vh;
+		}
+
+		.board {
+			width: 100%;
+			height: 100%;
+		}
+
+		.pin {
+			cursor: pointer;
+		}
+
+		.selected {
+			-webkit-filter: drop-shadow(0 0 0.75rem crimson);
+			filter: drop-shadow(0 0 0.75rem crimson);
+			transition: all .5s;
+		}
+
+		.selected circle {
+			fill: red;
+		}
+
+		.list {
+			width: 150px;
+			height: 25px;
+			border: 1px solid grey;
+			position: absolute;
+		}
+
+		.alone {
+			appearance: none;
+			padding-left: 4px;
+		}
+
+		.note {
+			position: absolute;
+		}
+
+		.button {
+			position: absolute;
+			bottom: 5vh;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.st0 {
+			fill: #0A6939;
+		}
+
+		.st1 {
+			fill: #014F29;
+		}
+
+		.st2 {
+			fill: none;
+		}
+
+		.st3 {
+			fill: #338661;
+		}
+
+		.st4 {
+			fill: #F8E935;
+		}
+
+		.st5 {
+			fill: #353B45;
+		}
+
+		.st6 {
+			fill: #DBDDDA;
+		}
+
+		.st7 {
+			fill: #2B2D2F;
+		}
+
+		.st8 {
+			fill: #E9F5FC;
+		}
+
+		.st9 {
+			fill: #CDCBCB;
+		}
+
+		.st10 {
+			fill: #FFFFFF;
+		}
+
+		.st11 {
+			fill: #57AF39;
+		}
+
+		.st12 {
+			fill: #958763;
+		}
+
+		.st13 {
+			fill: #99906C;
+		}
+
+		.st14 {
+			fill: #349AD6;
+		}
+
+		.st15 {
+			fill: #BCBBBA;
+		}
+
+		.st16 {
+			enable-background: new;
+		}
+
+		.st17 {
+			fill: #323230;
+		}
+
+		.st18 {
+			fill: #3E3F38;
+		}
+
+		.st19 {
+			fill: #AAC1BE;
+		}
+
+		.st20 {
+			fill: #CDCCCC;
+		}
+
+		.st21 {
+			background-color: #363A44;
+			color: white;
+		}
+
+		.st22 {
+			background-color: #E73333;
+		}
+
+		.st23 {
+			background-color: #458031;
+		}
+
+		.st24 {
+			background-color: #F5ADAE;
+		}
+
+		.st25 {
+			background-color: #A32E70;
+		}
+
+		.st26 {
+			background-color: #D43F8F;
+		}
+
+		.st27 {
+			background-color: #449ED6;
+		}
+
+		.st28 {
+			background-color: #20618A;
+		}
+
+		.st29 {
+			background-color: #5B4394;
+		}
+
+		.st30 {
+			background-color: #9C89C0;
+		}
+
+		.st31 {
+			background-color: #80BC49;
+		}
+
+		.st32 {
+			fill: #EB8326;
+		}
+
+		.st33 {
+			fill: #E3E25A;
+		}
+	</style>
+</head>
 
 <body>
 	<div class="container">
@@ -9,175 +204,6 @@
 		<svg class="board" viewBox="0 0 200 390" xmlns="http://www.w3.org/2000/svg"
 			xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
 			xml:space=" reserve">
-			<style type="text/css">
-				body {
-					margin: 0;
-				}
-
-				.container {
-					height: 90vh;
-				}
-
-				.board {
-					width: 100%;
-					height: 100%;
-				}
-
-				.pin {
-					cursor: pointer;
-				}
-
-				.list {
-					width: 150px;
-					height: 25px;
-					border: 1px solid grey;
-					position: absolute;
-				}
-
-				.button {
-					position: absolute;
-					bottom: 5vh;
-					left: 50%;
-					transform: translateX(-50%);
-				}
-
-				.st0 {
-					fill: #0A6939;
-				}
-
-				.st1 {
-					fill: #014F29;
-				}
-
-				.st2 {
-					fill: none;
-				}
-
-				.st3 {
-					fill: #338661;
-				}
-
-				.st4 {
-					fill: #F8E935;
-				}
-
-				.st5 {
-					fill: #353B45;
-				}
-
-				.st6 {
-					fill: #DBDDDA;
-				}
-
-				.st7 {
-					fill: #2B2D2F;
-				}
-
-				.st8 {
-					fill: #E9F5FC;
-				}
-
-				.st9 {
-					fill: #CDCBCB;
-				}
-
-				.st10 {
-					fill: #FFFFFF;
-				}
-
-				.st11 {
-					fill: #57AF39;
-				}
-
-				.st12 {
-					fill: #958763;
-				}
-
-				.st13 {
-					fill: #99906C;
-				}
-
-				.st14 {
-					fill: #349AD6;
-				}
-
-				.st15 {
-					fill: #BCBBBA;
-				}
-
-				.st16 {
-					enable-background: new;
-				}
-
-				.st17 {
-					fill: #323230;
-				}
-
-				.st18 {
-					fill: #3E3F38;
-				}
-
-				.st19 {
-					fill: #AAC1BE;
-				}
-
-				.st20 {
-					fill: #CDCCCC;
-				}
-
-				.st21 {
-					background-color: #363A44;
-					color: white;
-				}
-
-				.st22 {
-					background-color: #E73333;
-				}
-
-				.st23 {
-					background-color: #458031;
-				}
-
-				.st24 {
-					background-color: #F5ADAE;
-				}
-
-				.st25 {
-					background-color: #A32E70;
-				}
-
-				.st26 {
-					background-color: #D43F8F;
-				}
-
-				.st27 {
-					background-color: #449ED6;
-				}
-
-				.st28 {
-					background-color: #20618A;
-				}
-
-				.st29 {
-					background-color: #5B4394;
-				}
-
-				.st30 {
-					background-color: #9C89C0;
-				}
-
-				.st31 {
-					background-color: #80BC49;
-				}
-
-				.st32 {
-					fill: #EB8326;
-				}
-
-				.st33 {
-					fill: #E3E25A;
-				}
-			</style>
 			<g class="layer">
 				<title>Layer 1</title>
 				<g id="svg_1">
@@ -1039,135 +1065,135 @@
 						</g>
 						<g id="coppers_00000140730816010989237620000012474752491928388481_">
 							<g id="svg_318">
-								<g id="connector0pin_00000132064906909926274290000007736714485792619441_">
+								<g id=connector0>
 									<circle class="st2" cx="35.05" cy="27.17" id="svg_319" r="2.95" />
 								</g>
-								<g id="connector1pin_00000132803767779440925800000009635037457853570984_">
+								<g id=connector1>
 									<circle class="st2" cx="35.05" cy="45.6" id="svg_320" r="2.95" />
 								</g>
-								<g id="connector2pin_00000026143551106024361140000018098876369066377391_">
+								<g id=connector2>
 									<circle class="st2" cx="35.05" cy="64.02" id="svg_321" r="2.95" />
 								</g>
-								<g id="connector3pin_00000039841804568991336550000011322390240441266843_">
+								<g id=connector3>
 									<circle class="st2" cx="35.05" cy="82.45" id="svg_322" r="2.95" />
 								</g>
-								<g id="connector4pin_00000047743991518283300050000017814660788620831364_">
+								<g id=connector4>
 									<circle class="st2" cx="35.05" cy="100.87" id="svg_323" r="2.95" />
 								</g>
-								<g id="connector5pin_00000122678218363669865330000002130556253729168283_">
+								<g id=connector5>
 									<circle class="st2" cx="35.05" cy="119.29" id="svg_324" r="2.95" />
 								</g>
-								<g id="connector6pin_00000094590954544307816690000001595019712388725662_">
+								<g id=connector6>
 									<circle class="st2" cx="35.05" cy="137.71" id="svg_325" r="2.95" />
 								</g>
-								<g id="connector7pin_00000181059159753414475220000007263472973461412492_">
+								<g id=connector7>
 									<circle class="st2" cx="35.05" cy="156.13" id="svg_326" r="2.95" />
 								</g>
-								<g id="connector8pin_00000165198470131431583440000011848213587489267074_">
+								<g id=connector8>
 									<circle class="st2" cx="34.97" cy="174.56" id="svg_327" r="2.95" />
 								</g>
-								<g id="connector9pin_00000088115795355913613100000008501609182784749985_">
+								<g id=connector9>
 									<circle class="st2" cx="34.97" cy="192.98" id="svg_328" r="2.95" />
 								</g>
-								<g id="connector10pin_00000087404540815368501050000006847960899226391685_">
+								<g id=connector10>
 									<circle class="st2" cx="34.97" cy="211.4" id="svg_329" r="2.95" />
 								</g>
-								<g id="connector11pin_00000167373599034700052510000002946086737962399111_">
+								<g id=connector11>
 									<circle class="st2" cx="34.97" cy="229.82" id="svg_330" r="2.95" />
 								</g>
-								<g id="connector12pin_00000005972271124312655530000002543586877047666853_">
+								<g id=connector12>
 									<circle class="st2" cx="34.97" cy="248.25" id="svg_331" r="2.95" />
 								</g>
-								<g id="connector13pin_00000103943483593234698820000009207748935240050332_">
+								<g id=connector13>
 									<circle class="st2" cx="34.97" cy="266.67" id="svg_332" r="2.95" />
 								</g>
-								<g id="connector14pin_00000096745721178515530550000004981545543655386553_">
+								<g id=connector14>
 									<circle class="st2" cx="34.97" cy="285.09" id="svg_333" r="2.95" />
 								</g>
-								<g id="connector15pin_00000140695909240548565350000000056665027290196908_">
+								<g id=connector15>
 									<circle class="st2" cx="34.97" cy="303.51" id="svg_334" r="2.95" />
 								</g>
-								<g id="connector16pin_00000015347605341463073470000008060867032918121909_">
+								<g id=connector16>
 									<circle class="st2" cx="34.97" cy="321.94" id="svg_335" r="2.95" />
 								</g>
-								<g id="connector17pin_00000110439220350427858030000004954578565854653112_">
+								<g id=connector17>
 									<circle class="st2" cx="34.97" cy="340.36" id="svg_336" r="2.95" />
 								</g>
-								<g id="connector18pin_00000114036726256301216250000007224920554707340181_">
+								<g id=connector18>
 									<circle class="st2" cx="34.97" cy="358.78" id="svg_337" r="2.95" />
 								</g>
-								<g id="connector19pin_00000010310069588378413070000000833618337824477608_">
+								<g id=connector19>
 									<circle class="st2" cx="34.97" cy="377.2" id="svg_338" r="2.95" />
 								</g>
-								<g id="connector20pin_00000008830060176909567030000003613883442744081599_">
+								<g id=connector20>
 									<circle class="st2" cx="163.93" cy="377.2" id="svg_339" r="2.95" />
 								</g>
-								<g id="connector21pin_00000182514748256703237960000015570567242321843072_">
+								<g id=connector21>
 									<circle class="st2" cx="163.93" cy="358.78" id="svg_340" r="2.95" />
 								</g>
-								<g id="connector22pin_00000018194678765750956780000001646839700370185627_">
+								<g id=connector22>
 									<circle class="st2" cx="163.93" cy="340.36" id="svg_341" r="2.95" />
 								</g>
-								<g id="connector23pin_00000159470908107483104540000009047242900519944071_">
+								<g id=connector23>
 									<circle class="st2" cx="163.93" cy="321.94" id="svg_342" r="2.95" />
 								</g>
-								<g id="connector24pin_00000151528581661928220920000008733016653597450906_">
+								<g id=connector24>
 									<circle class="st2" cx="163.93" cy="303.51" id="svg_343" r="2.95" />
 								</g>
-								<g id="connector25pin_00000172407827133277627400000006557111534829059987_">
+								<g id=connector25>
 									<circle class="st2" cx="163.93" cy="285.09" id="svg_344" r="2.95" />
 								</g>
-								<g id="connector26pin_00000023985066198850105630000011617169288584355996_">
+								<g id=connector26>
 									<circle class="st2" cx="163.93" cy="266.67" id="svg_345" r="2.95" />
 								</g>
-								<g id="connector27pin_00000088090827825950312490000000637504488155348667_">
+								<g id=connector27>
 									<circle class="st2" cx="163.93" cy="248.25" id="svg_346" r="2.95" />
 								</g>
-								<g id="connector28pin_00000015347259096246358830000016743552820009483916_">
+								<g id=connector28>
 									<circle class="st2" cx="163.93" cy="229.82" id="svg_347" r="2.95" />
 								</g>
-								<g id="connector29pin_00000085218866862045367360000008003493355424717742_">
+								<g id=connector29>
 									<circle class="st2" cx="163.93" cy="211.4" id="svg_348" r="2.95" />
 								</g>
-								<g id="connector30pin_00000075152741799282632740000014790513738290488749_">
+								<g id=connector30>
 									<circle class="st2" cx="163.93" cy="192.98" id="svg_349" r="2.95" />
 								</g>
-								<g id="connector31pin_00000153665513143110716480000003324128153540033183_">
+								<g id=connector31>
 									<circle class="st2" cx="163.93" cy="174.56" id="svg_350" r="2.95" />
 								</g>
-								<g id="connector32pin_00000094582235136778905770000015438284623157972149_">
+								<g id=connector32>
 									<circle class="st2" cx="163.93" cy="156.13" id="svg_351" r="2.95" />
 								</g>
-								<g id="connector33pin_00000170244417362326481860000006817659888215486622_">
+								<g id=connector33>
 									<circle class="st2" cx="163.93" cy="137.71" id="svg_352" r="2.95" />
 								</g>
-								<g id="connector34pin_00000007413471124452132800000004633721477727455112_">
+								<g id=connector34>
 									<circle class="st2" cx="163.93" cy="119.29" id="svg_353" r="2.95" />
 								</g>
-								<g id="connector35pin_00000037660755940530269360000012964576763442843278_">
+								<g id=connector35>
 									<circle class="st2" cx="163.93" cy="100.87" id="svg_354" r="2.95" />
 								</g>
-								<g id="connector36pin_00000083770945464394559020000014418299798569243031_">
+								<g id=connector36>
 									<circle class="st2" cx="163.93" cy="82.45" id="svg_355" r="2.95" />
 								</g>
-								<g id="connector37pin_00000152266550502664865720000015139786167175966605_">
+								<g id=connector37>
 									<circle class="st2" cx="163.93" cy="64.02" id="svg_356" r="2.95" />
 								</g>
-								<g id="connector38pin_00000069362959836019927160000006791831502315961502_">
+								<g id=connector38>
 									<circle class="st2" cx="163.93" cy="45.6" id="svg_357" r="2.95" />
 								</g>
-								<g id="connector39pin_00000149343437597547340280000002078924629404068272_">
+								<g id=connector39>
 									<circle class="st2" cx="163.93" cy="27.18" id="svg_358" r="2.95" />
 								</g>
-								<g id="connector40pin_00000082326011174772631350000012936294748246829489_">
+								<g id=connector40>
 									<path class="st2" d="m81.03,380.15c-1.63,0 -2.95,-1.32 -2.95,-2.95" id="svg_359" />
 								</g>
-								<g id="connector41pin_00000163770214921492505980000016513646686719705491_">
+								<g id=connector41>
 									<path class="st2"
 										d="m102.4,377.2c0,1.63 -1.32,2.95 -2.95,2.95s-2.95,-1.32 -2.95,-2.95"
 										id="svg_360" />
 								</g>
-								<g id="connector42pin_00000043443031428882444670000002695200823532932243_">
+								<g id=connector42>
 									<path class="st2"
 										d="m120.82,377.2c0,1.63 -1.32,2.95 -2.95,2.95s-2.95,-1.32 -2.95,-2.95"
 										id="svg_361" />
@@ -2570,11 +2596,14 @@
 		Array.from(document.body.querySelectorAll('.pin')).map(pin => {
 			const pinRect = pin.getClientRects()[0]
 			const select = document.createElement('select')
+			const note = document.createElement('input')
 			const pinInfo = pinList[pin.id]
 
 			select.className = 'list'
+			note.className = 'note'
+
 			select.id = pin.id
-			select.style.top = pinRect.top + 'px'
+			note.value = pinInfo.text
 
 
 			for (let mode in pinInfo.modes) {
@@ -2585,26 +2614,37 @@
 
 			if (select.length === 1) {
 				select[0].selected = true
-				select.className = 'list ' + pinInfo.modes[select.value].class
-				console.log(select, 'list ' + pinInfo.modes[select.value].class)
+				selectPin(select)
+				select.classList.add('alone')
+				select.inert = true
 			}
 			else {
 				select.append(createOption('', '', true))
 			}
 
 
-			interface.append(select)
+			interface.append(select, note)
 
 			const selectWidth = select.offsetWidth
 
+			select.style.top = pinRect.top + 'px'
+			note.style.top = pinRect.top + 'px'
+
 			if (pin.id > 20) {
-				select.style.left = pinRect.left + pinRect.width + 5 + 'px'
+				const leftOffset = pinRect.left + pinRect.width + 5
+
+				select.style.left = leftOffset + 'px'
+				note.style.left = leftOffset + selectWidth + 5 + 'px'
 			}
 			else {
-				select.style.left = pinRect.left - selectWidth - 5 + 'px'
+				const leftOffset = pinRect.left - selectWidth - 5
+
+				select.style.left = leftOffset + 'px'
+				note.style.left = leftOffset - note.offsetWidth - 5 + 'px'
 			}
 
 			select.style.height = pinRect.height + 'px'
+			note.style.height = pinRect.height + 'px'
 		})
 	}
 
@@ -2615,15 +2655,18 @@
 		const select = e.target
 
 		if (select && select.id) {
-			pinList[select.id].mode = select.value
+			selectPin(select)
 		}
 
 		if (e.target.value === '') {
 			select.className = 'list'
 		}
-		else {
-			select.className = 'list ' + pinList[select.id].modes[select.value].class
-		}
+	}
+
+	function selectPin(select) {
+		pinList[select.id].mode = select.value
+		select.classList.add(pinList[select.id].modes[select.value].class)
+		document.body.querySelector(`#connector${select.id - 1}`).classList.add('selected')
 	}
 
 	function send(e) {
