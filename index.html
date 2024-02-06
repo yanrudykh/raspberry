@@ -47,6 +47,10 @@
 			padding-left: 4px;
 		}
 
+		.empty {
+			background: white;
+		}
+
 		.note {
 			position: absolute;
 		}
@@ -2619,7 +2623,7 @@
 				select.inert = true
 			}
 			else {
-				select.append(createOption('', '', true))
+				select.append(createOption('', 'empty', true))
 			}
 
 
@@ -2665,8 +2669,19 @@
 
 	function selectPin(select) {
 		pinList[select.id].mode = select.value
-		select.classList.add(pinList[select.id].modes[select.value].class)
-		document.body.querySelector(`#connector${select.id - 1}`).classList.add('selected')
+
+		const selectedClass = Array.from(select.classList).find(elem => select.classList[elem.search(/st\d+/)])
+		select.classList.remove(selectedClass)
+
+		if (select.value) {
+			select.classList.add(pinList[select.id].modes[select.value].class)
+			document.body.querySelector(`#connector${select.id - 1}`).classList.add('selected')
+		}
+		else {
+			document.body.querySelector(`#connector${select.id - 1}`).classList.remove('selected')
+		}
+
+
 	}
 
 	function send(e) {
