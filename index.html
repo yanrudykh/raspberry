@@ -21,34 +21,22 @@
 			height: 100%;
 		}
 
-		.pin {
-			cursor: pointer;
-		}
-
-		.selected {
-			-webkit-filter: drop-shadow(0 0 0.75rem crimson);
-			filter: drop-shadow(0 0 0.75rem crimson);
-			transition: all .5s;
-		}
-
-		.selected circle {
-			fill: red;
-		}
-
-		.list {
+		select {
 			width: 150px;
 			height: 25px;
 			border: 1px solid grey;
 			position: absolute;
+			color: white;
+		}
+
+		option {
+			color: white;
+			background-color: white;
 		}
 
 		.alone {
 			appearance: none;
 			padding-left: 4px;
-		}
-
-		.empty {
-			background: white;
 		}
 
 		.note {
@@ -138,65 +126,8 @@
 			fill: #3E3F38;
 		}
 
-		.st19 {
-			fill: #AAC1BE;
-		}
-
 		.st20 {
 			fill: #CDCCCC;
-		}
-
-		.st21 {
-			background-color: #363A44;
-			color: white;
-		}
-
-		.st22 {
-			background-color: #E73333;
-		}
-
-		.st23 {
-			background-color: #458031;
-		}
-
-		.st24 {
-			background-color: #F5ADAE;
-		}
-
-		.st25 {
-			background-color: #A32E70;
-		}
-
-		.st26 {
-			background-color: #D43F8F;
-		}
-
-		.st27 {
-			background-color: #449ED6;
-		}
-
-		.st28 {
-			background-color: #20618A;
-		}
-
-		.st29 {
-			background-color: #5B4394;
-		}
-
-		.st30 {
-			background-color: #9C89C0;
-		}
-
-		.st31 {
-			background-color: #80BC49;
-		}
-
-		.st32 {
-			fill: #EB8326;
-		}
-
-		.st33 {
-			fill: #E3E25A;
 		}
 	</style>
 </head>
@@ -1943,17 +1874,17 @@
 
 			"modes": {
 				"GP0": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off",
 				},
 				"SPI0_RX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART0_TX": {
-					"class": "st29"
+					"color": "#5B4394"
 				}
 			},
 			"mode": ""
@@ -1964,17 +1895,17 @@
 
 			"modes": {
 				"GP1": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_CSN": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART0_RX": {
-					"class": "st29"
+					"color": "#5B4394"
 				}
 			},
 			"mode": ""
@@ -1985,7 +1916,7 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				}
 			},
 			"mode": "GND"
@@ -1996,14 +1927,14 @@
 
 			"modes": {
 				"GP2": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_SCK": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2014,14 +1945,14 @@
 
 			"modes": {
 				"GP3": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_TX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2032,17 +1963,17 @@
 
 			"modes": {
 				"GP4": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_RX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SDA": {
-					"class": "st28"
+					"color": "#20618A"
 				},
 				"UART1_TX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2053,17 +1984,17 @@
 
 			"modes": {
 				"GP5": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_CSN": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SCL": {
-					"class": "st28"
+					"color": "#20618A"
 				},
 				"UART1_RX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2074,7 +2005,7 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				}
 			},
 			"mode": "GND"
@@ -2085,14 +2016,14 @@
 
 			"modes": {
 				"GP6": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_SCK": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2103,14 +2034,14 @@
 
 			"modes": {
 				"GP7": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_TX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2121,17 +2052,17 @@
 
 			"modes": {
 				"GP8": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_RX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART1_TX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2142,17 +2073,17 @@
 
 			"modes": {
 				"GP9": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_CSN": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART1_RX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2163,7 +2094,7 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				}
 			},
 			"mode": "GND"
@@ -2174,14 +2105,14 @@
 
 			"modes": {
 				"GP": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_SCK": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2192,14 +2123,14 @@
 
 			"modes": {
 				"GP11": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_TX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2210,17 +2141,17 @@
 
 			"modes": {
 				"GP12": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_RX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART0_TX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2231,17 +2162,17 @@
 
 			"modes": {
 				"GP13": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_CSN": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C0_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART0_RX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2252,7 +2183,7 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				}
 			},
 			"mode": "GND"
@@ -2263,14 +2194,14 @@
 
 			"modes": {
 				"GP14": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_SCK": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2281,14 +2212,14 @@
 
 			"modes": {
 				"GP15": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI1_TX": {
-					"class": "st26"
+					"color": "#D43F8F"
 				},
 				"I2C1_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2299,17 +2230,17 @@
 
 			"modes": {
 				"GP16": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_RX": {
-					"class": "st21"
+					"color": "#363A44"
 				},
 				"I2C0_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART0_TX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2320,17 +2251,17 @@
 
 			"modes": {
 				"GP17": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_CSN": {
-					"class": "st21"
+					"color": "#363A44"
 				},
 				"I2C0_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				},
 				"UART0_RX": {
-					"class": "st30"
+					"color": "#9C89C0"
 				}
 			},
 			"mode": ""
@@ -2341,7 +2272,7 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				}
 			},
 			"mode": "GND"
@@ -2352,14 +2283,14 @@
 
 			"modes": {
 				"GP18": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_SCK": {
-					"class": "st21"
+					"color": "#363A44"
 				},
 				"I2C1_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2370,14 +2301,14 @@
 
 			"modes": {
 				"GP19": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"SPI0_TX": {
-					"class": "st21"
+					"color": "#363A44"
 				},
 				"I2C1_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2388,11 +2319,11 @@
 
 			"modes": {
 				"GP20": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"I2C0_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2403,11 +2334,11 @@
 
 			"modes": {
 				"GP21": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"I2C0_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2418,7 +2349,7 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				}
 			},
 			"mode": "GND"
@@ -2429,7 +2360,7 @@
 
 			"modes": {
 				"GP22": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				}
 			},
@@ -2441,7 +2372,7 @@
 
 			"modes": {
 				"RUN": {
-					"class": "st24"
+					"color": "#F5ADAE"
 				}
 			},
 			"mode": "RUN"
@@ -2452,14 +2383,14 @@
 
 			"modes": {
 				"GP26": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"ADC0": {
-					"class": "st23"
+					"color": "#458031"
 				},
 				"I2C1_SDA": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
 			"mode": ""
@@ -2470,17 +2401,17 @@
 
 			"modes": {
 				"GP27": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"ADC1": {
-					"class": "st23"
+					"color": "#458031"
 				},
 				"I2C1_SCL": {
-					"class": "st27"
+					"color": "#449ED6"
 				}
 			},
-			"mode": ""
+			"mode": "ADC1"
 		},
 
 		"33": {
@@ -2488,10 +2419,10 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				},
 				"AGND": {
-					"class": "st23"
+					"color": "#458031"
 				}
 			},
 			"mode": ""
@@ -2502,11 +2433,11 @@
 
 			"modes": {
 				"GP28": {
-					"class": "st31",
+					"color": "#80BC49",
 					"state": "off"
 				},
 				"ADC2": {
-					"class": "st23"
+					"color": "#458031"
 				}
 			},
 			"mode": ""
@@ -2517,7 +2448,7 @@
 
 			"modes": {
 				"ADC_VREF": {
-					"class": "st23"
+					"color": "#458031"
 				}
 			},
 			"mode": "ADC_VREF"
@@ -2528,7 +2459,7 @@
 
 			"modes": {
 				"3V3(OUT)": {
-					"class": "st22"
+					"color": "#E73333"
 				}
 			},
 			"mode": "3V3(OUT)"
@@ -2539,7 +2470,7 @@
 
 			"modes": {
 				"3V3_EN": {
-					"class": "st24"
+					"color": "#F5ADAE"
 				}
 			},
 			"mode": "3V3_EN"
@@ -2550,7 +2481,7 @@
 
 			"modes": {
 				"GND": {
-					"class": "st21"
+					"color": "#363A44"
 				}
 			},
 			"mode": "GND"
@@ -2561,7 +2492,7 @@
 
 			"modes": {
 				"VSYS": {
-					"class": "st22"
+					"color": "#E73333"
 				}
 			},
 
@@ -2573,7 +2504,7 @@
 
 			"modes": {
 				"VBUS": {
-					"class": "st22"
+					"color": "#E73333"
 				}
 			},
 
@@ -2581,11 +2512,13 @@
 		}
 	}
 
-	const createOption = (value, className, selected) => {
+	const pinsOnBoard = Array.from(document.body.querySelectorAll('.pin'))
+
+	const createOption = (value, color, selected) => {
 		const option = document.createElement('option')
 		option.value = value
 		option.textContent = value
-		option.className = className
+		option.style.backgroundColor = color
 		option.selected = selected
 
 		return option
@@ -2597,13 +2530,12 @@
 		const interface = document.body.querySelector('.interface')
 		interface.innerHTML = ''
 
-		Array.from(document.body.querySelectorAll('.pin')).map(pin => {
+		pinsOnBoard.map(pin => {
 			const pinRect = pin.getClientRects()[0]
 			const select = document.createElement('select')
 			const note = document.createElement('input')
 			const pinInfo = pinList[pin.id]
 
-			select.className = 'list'
 			note.className = 'note'
 
 			select.id = pin.id
@@ -2612,7 +2544,7 @@
 
 			for (let mode in pinInfo.modes) {
 				if (mode !== undefined) {
-					select.append(createOption(mode, pinInfo.modes[mode].class, pinInfo.mode === mode))
+					select.append(createOption(mode, pinInfo.modes[mode].color, pinInfo.mode === mode))
 				}
 			}
 
@@ -2623,7 +2555,7 @@
 				select.inert = true
 			}
 			else {
-				select.append(createOption('', 'empty', true))
+				select.append(createOption('', '', true))
 			}
 
 
@@ -2661,27 +2593,21 @@
 		if (select && select.id) {
 			selectPin(select)
 		}
-
-		if (e.target.value === '') {
-			select.className = 'list'
-		}
 	}
 
 	function selectPin(select) {
 		pinList[select.id].mode = select.value
 
-		const selectedClass = Array.from(select.classList).find(elem => select.classList[elem.search(/st\d+/)])
-		select.classList.remove(selectedClass)
-
 		if (select.value) {
-			select.classList.add(pinList[select.id].modes[select.value].class)
-			document.body.querySelector(`#connector${select.id - 1}`).classList.add('selected')
+			select.style.backgroundColor = pinList[select.id].modes[select.value].color
+			select.style.color = ''
 		}
 		else {
-			document.body.querySelector(`#connector${select.id - 1}`).classList.remove('selected')
+			select.style.backgroundColor = ''
+			select.style.color = 'black'
 		}
 
-
+		console.log(select)
 	}
 
 	function send(e) {
@@ -2690,10 +2616,9 @@
 
 		fetch('url', pinList)
 			.then(res => {
-				console.log(res)
-			})
-			.catch(e => {
-				console.log('error', e)
+				if (!res.ok) {
+					alert('Ошибка: ' + res.status)
+				}
 			})
 	}
 
