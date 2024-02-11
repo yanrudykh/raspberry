@@ -21,12 +21,22 @@
 			height: 100%;
 		}
 
+		.wire {
+			width: 26px;
+			height: 3px;
+			position: absolute;
+		}
+
 		select {
 			width: 150px;
 			height: 25px;
 			border: 1px solid grey;
 			position: absolute;
 			color: white;
+		}
+
+		select:has(option[value=""]:checked) {
+			color: black;
 		}
 
 		option {
@@ -2512,7 +2522,7 @@
 		}
 	}
 
-	const pinsOnBoard = Array.from(document.body.querySelectorAll('.pin'))
+	const pinsOnBoard = document.body.querySelectorAll('.pin')
 
 	const createOption = (value, color, selected) => {
 		const option = document.createElement('option')
@@ -2530,15 +2540,19 @@
 		const interface = document.body.querySelector('.interface')
 		interface.innerHTML = ''
 
-		pinsOnBoard.map(pin => {
+		Array.from(pinsOnBoard).map(pin => {
 			const pinRect = pin.getClientRects()[0]
 			const select = document.createElement('select')
 			const note = document.createElement('input')
+			const wire = document.createElement('div')
+
 			const pinInfo = pinList[pin.id]
 
+			wire.className = 'wire'
 			note.className = 'note'
 
 			select.id = pin.id
+			wire.id = pin.id
 			note.value = pinInfo.text
 
 
@@ -2547,6 +2561,8 @@
 					select.append(createOption(mode, pinInfo.modes[mode].color, pinInfo.mode === mode))
 				}
 			}
+
+			interface.append(wire, select, note)
 
 			if (select.length === 1) {
 				select[0].selected = true
@@ -2558,29 +2574,29 @@
 				select.append(createOption('', '', true))
 			}
 
-
-			interface.append(select, note)
-
 			const selectWidth = select.offsetWidth
 
-			select.style.top = pinRect.top + 'px'
-			note.style.top = pinRect.top + 'px'
+			select.style.top = pinRect.top - 1 + 'px'
+			note.style.top = pinRect.top - 1 + 'px'
+			wire.style.top = pinRect.top + (pinRect.height / 2) - (wire.offsetHeight / 2) + 'px'
 
 			if (pin.id > 20) {
 				const leftOffset = pinRect.left + pinRect.width + 5
 
 				select.style.left = leftOffset + 'px'
+				wire.style.left = pinRect.left - wire.offsetWidth + 'px'
 				note.style.left = leftOffset + selectWidth + 5 + 'px'
 			}
 			else {
 				const leftOffset = pinRect.left - selectWidth - 5
 
 				select.style.left = leftOffset + 'px'
+				wire.style.left = pinRect.left + pinRect.width + 'px'
 				note.style.left = leftOffset - note.offsetWidth - 5 + 'px'
 			}
 
-			select.style.height = pinRect.height + 'px'
-			note.style.height = pinRect.height + 'px'
+			select.style.height = pinRect.height + 2 + 'px'
+			note.style.height = pinRect.height + 2 + 'px'
 		})
 	}
 
@@ -2596,18 +2612,26 @@
 	}
 
 	function selectPin(select) {
+		const selectedPinRect = document.querySelector(`[id='${select.id}'] rect`)
+		const wireSelector = `.wire[id='${select.id}']`
+		const selectedPinWire = document.querySelector(wireSelector)
+		console.log(wireSelector, selectedPinWire)
+
 		pinList[select.id].mode = select.value
 
 		if (select.value) {
-			select.style.backgroundColor = pinList[select.id].modes[select.value].color
+			const color = pinList[select.id].modes[select.value].color
+			select.style.background = color
+			selectedPinRect.style.stroke = color
 			select.style.color = ''
+			selectedPinWire.style.background = color
 		}
 		else {
-			select.style.backgroundColor = ''
+			select.style.background = ''
 			select.style.color = 'black'
+			selectedPinRect.style.stroke = ''
+			selectedPinWire.style.background = ''
 		}
-
-		console.log(select)
 	}
 
 	function send(e) {
