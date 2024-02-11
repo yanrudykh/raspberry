@@ -27,7 +27,7 @@
 			position: absolute;
 		}
 
-		select {
+		.list {
 			width: 150px;
 			height: 25px;
 			border: 1px solid grey;
@@ -35,8 +35,12 @@
 			color: white;
 		}
 
-		select:has(option[value=""]:checked) {
+		.list:has(option[value=""]:checked) {
 			color: black;
+		}
+
+		.list:focus-visible {
+			outline: none;
 		}
 
 		option {
@@ -2548,11 +2552,13 @@
 
 			const pinInfo = pinList[pin.id]
 
+			select.className = 'list'
 			wire.className = 'wire'
 			note.className = 'note'
 
 			select.id = pin.id
 			wire.id = pin.id
+			note.id = pin.id
 			note.value = pinInfo.text
 
 
@@ -2584,7 +2590,7 @@
 				const leftOffset = pinRect.left + pinRect.width + 5
 
 				select.style.left = leftOffset + 'px'
-				wire.style.left = pinRect.left - wire.offsetWidth + 'px'
+				wire.style.left = pinRect.left - wire.offsetWidth + 1 + 'px'
 				note.style.left = leftOffset + selectWidth + 5 + 'px'
 			}
 			else {
@@ -2604,10 +2610,14 @@
 
 
 	document.onchange = e => {
-		const select = e.target
-
-		if (select && select.id) {
+		console.log(e.target)
+		const target = e.target
+		if (target.classList.contains('list')) {
 			selectPin(select)
+		}
+
+		if (target.classList.contains('note')) {
+			pinList[target.id].text = target.value
 		}
 	}
 
@@ -2621,13 +2631,15 @@
 		if (select.value) {
 			const color = pinList[select.id].modes[select.value].color
 			select.style.background = color
-			selectedPinRect.style.stroke = color
 			select.style.color = ''
+			select.style.borderColor = color
+			selectedPinRect.style.stroke = color
 			selectedPinWire.style.background = color
 		}
 		else {
 			select.style.background = ''
 			select.style.color = 'black'
+			select.style.borderColor = ''
 			selectedPinRect.style.stroke = ''
 			selectedPinWire.style.background = ''
 		}
