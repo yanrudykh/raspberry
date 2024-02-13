@@ -1,0 +1,562 @@
+{
+    "1": {
+        "text": "",
+        "modes": {
+            "GP0": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_RX": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SDA": {
+                "color": "#449ED6"
+            },
+            "UART0_TX": {
+                "color": "#5B4394"
+            }
+        },
+        "mode": ""
+    },
+    "2": {
+        "text": "",
+        "modes": {
+            "GP1": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_CSN": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SCL": {
+                "color": "#449ED6"
+            },
+            "UART0_RX": {
+                "color": "#5B4394"
+            }
+        },
+        "mode": ""
+    },
+    "3": {
+        "text": "Gnd only",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            }
+        },
+        "mode": "GND"
+    },
+    "4": {
+        "text": "",
+        "modes": {
+            "GP2": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_SCK": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SDA": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "5": {
+        "text": "",
+        "modes": {
+            "GP3": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_TX": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SCL": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "6": {
+        "text": "",
+        "modes": {
+            "GP4": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_RX": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SDA": {
+                "color": "#20618A"
+            },
+            "UART1_TX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "7": {
+        "text": "",
+        "modes": {
+            "GP5": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_CSN": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SCL": {
+                "color": "#20618A"
+            },
+            "UART1_RX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "8": {
+        "text": "Gnd only",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            }
+        },
+        "mode": "GND"
+    },
+    "9": {
+        "text": "",
+        "modes": {
+            "GP6": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_SCK": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SDA": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "10": {
+        "text": "",
+        "modes": {
+            "GP7": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_TX": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SCL": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "11": {
+        "text": "",
+        "modes": {
+            "GP8": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_RX": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SDA": {
+                "color": "#449ED6"
+            },
+            "UART1_TX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "12": {
+        "text": "",
+        "modes": {
+            "GP9": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_CSN": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SCL": {
+                "color": "#449ED6"
+            },
+            "UART1_RX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "13": {
+        "text": "Gnd only",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            }
+        },
+        "mode": "GND"
+    },
+    "14": {
+        "text": "",
+        "modes": {
+            "GP": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_SCK": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SDA": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "15": {
+        "text": "",
+        "modes": {
+            "GP11": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_TX": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SCL": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "16": {
+        "text": "",
+        "modes": {
+            "GP12": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_RX": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SDA": {
+                "color": "#449ED6"
+            },
+            "UART0_TX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "17": {
+        "text": "",
+        "modes": {
+            "GP13": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_CSN": {
+                "color": "#D43F8F"
+            },
+            "I2C0_SCL": {
+                "color": "#449ED6"
+            },
+            "UART0_RX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "18": {
+        "text": "Gnd only",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            }
+        },
+        "mode": "GND"
+    },
+    "19": {
+        "text": "",
+        "modes": {
+            "GP14": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_SCK": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SDA": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "20": {
+        "text": "",
+        "modes": {
+            "GP15": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI1_TX": {
+                "color": "#D43F8F"
+            },
+            "I2C1_SCL": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "21": {
+        "text": "",
+        "modes": {
+            "GP16": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_RX": {
+                "color": "#363A44"
+            },
+            "I2C0_SDA": {
+                "color": "#449ED6"
+            },
+            "UART0_TX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "22": {
+        "text": "",
+        "modes": {
+            "GP17": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_CSN": {
+                "color": "#363A44"
+            },
+            "I2C0_SCL": {
+                "color": "#449ED6"
+            },
+            "UART0_RX": {
+                "color": "#9C89C0"
+            }
+        },
+        "mode": ""
+    },
+    "23": {
+        "text": "Gnd only",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            }
+        },
+        "mode": "GND"
+    },
+    "24": {
+        "text": "",
+        "modes": {
+            "GP18": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_SCK": {
+                "color": "#363A44"
+            },
+            "I2C1_SDA": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "25": {
+        "text": "Built in LED",
+        "modes": {
+            "GP19": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "SPI0_TX": {
+                "color": "#363A44"
+            },
+            "I2C1_SCL": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "26": {
+        "text": "",
+        "modes": {
+            "GP20": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "I2C0_SDA": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "27": {
+        "text": "",
+        "modes": {
+            "GP21": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "I2C0_SCL": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "28": {
+        "text": "Gnd only",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            }
+        },
+        "mode": "GND"
+    },
+    "29": {
+        "text": "",
+        "modes": {
+            "GP22": {
+                "color": "#80BC49",
+                "state": "off"
+            }
+        },
+        "mode": ""
+    },
+    "30": {
+        "text": "",
+        "modes": {
+            "RUN": {
+                "color": "#F5ADAE"
+            }
+        },
+        "mode": "RUN"
+    },
+    "31": {
+        "text": "",
+        "modes": {
+            "GP26": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "ADC0": {
+                "color": "#458031"
+            },
+            "I2C1_SDA": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": ""
+    },
+    "32": {
+        "text": "",
+        "modes": {
+            "GP27": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "ADC1": {
+                "color": "#458031"
+            },
+            "I2C1_SCL": {
+                "color": "#449ED6"
+            }
+        },
+        "mode": "ADC1"
+    },
+    "33": {
+        "text": "",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            },
+            "AGND": {
+                "color": "#458031"
+            }
+        },
+        "mode": ""
+    },
+    "34": {
+        "text": "",
+        "modes": {
+            "GP28": {
+                "color": "#80BC49",
+                "state": "off"
+            },
+            "ADC2": {
+                "color": "#458031"
+            }
+        },
+        "mode": ""
+    },
+    "35": {
+        "text": "",
+        "modes": {
+            "ADC_VREF": {
+                "color": "#458031"
+            }
+        },
+        "mode": "ADC_VREF"
+    },
+    "36": {
+        "text": "3V3 (OUT) (+3.3V)",
+        "modes": {
+            "3V3(OUT)": {
+                "color": "#E73333"
+            }
+        },
+        "mode": "3V3(OUT)"
+    },
+    "37": {
+        "text": "3V3_EN",
+        "modes": {
+            "3V3_EN": {
+                "color": "#F5ADAE"
+            }
+        },
+        "mode": "3V3_EN"
+    },
+    "38": {
+        "text": "Gnd only",
+        "modes": {
+            "GND": {
+                "color": "#363A44"
+            }
+        },
+        "mode": "GND"
+    },
+    "39": {
+        "text": "VSYS (IN) range(1.8V, 5.5V)",
+        "modes": {
+            "VSYS": {
+                "color": "#E73333"
+            }
+        },
+        "mode": "VSYS"
+    },
+    "40": {
+        "text": "VBUS (micro-USB input voltage) (+5V)",
+        "modes": {
+            "VBUS": {
+                "color": "#E73333"
+            }
+        },
+        "mode": "VBUS"
+    }
+}
