@@ -157,7 +157,7 @@
 <body>
 	<div class="container">
 		<div class="interface">
-			<button class="button" onclick="send(event)">Сохранить</button>
+			<button class="button">Сохранить</button>
 		</div>
 		<?xml version="1.0"?>
 		<svg class="board" viewBox="0 0 200 390" xmlns="http://www.w3.org/2000/svg"
@@ -1892,6 +1892,7 @@
 	import pinList from './data.json' assert { type: "json" }
 
 	const pinsOnBoard = document.body.querySelectorAll('.pin')
+	const button = document.body.querySelector('.button')
 
 	const createOption = (value, color, selected) => {
 		const option = document.createElement('option')
@@ -2006,6 +2007,8 @@
 			selectedPinWire.style.background = ''
 		}
 	}
+
+	button.addEventListener('click', send)
 
 	function send(e) {
 		e.preventDefault()
