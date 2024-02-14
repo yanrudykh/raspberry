@@ -1890,12 +1890,12 @@
 </body>
 <script type="module">
 	const pinList = await fetch('./data.json').then(res => res.json())
-	console.log(pinList)
 	const pinsOnBoard = document.body.querySelectorAll('.pin')
 	const button = document.body.querySelector('.button')
 
 	const createOption = (value, color, selected) => {
 		const option = document.createElement('option')
+
 		option.value = value
 		option.textContent = value
 		option.style.backgroundColor = color
@@ -1911,18 +1911,18 @@
 
 		Array.from(pinsOnBoard).map(pin => {
 			const pinRect = pin.getClientRects()[0]
-			const select = document.createElement('select')
-			const note = document.createElement('input')
-			const wire = document.createElement('div')
-
 			const pinInfo = pinList[pin.id]
 
+			const select = document.createElement('select')
 			select.className = 'list'
-			wire.className = 'wire'
-			note.className = 'note'
-
 			select.id = pin.id
+
+			const wire = document.createElement('div')
+			wire.className = 'wire'
 			wire.id = pin.id
+
+			const note = document.createElement('input')
+			note.className = 'note'
 			note.id = pin.id
 			note.value = pinInfo.text
 
@@ -1973,8 +1973,8 @@
 
 
 	document.onchange = e => {
-		console.log(e.target)
 		const target = e.target
+
 		if (target.classList.contains('list')) {
 			selectPin(target)
 		}
@@ -1985,17 +1985,20 @@
 	}
 
 	function selectPin(select) {
-		const selectedPinRect = document.querySelector(`[id='${select.id}'] rect`)
 		const wireSelector = `.wire[id='${select.id}']`
 		const selectedPinWire = document.querySelector(wireSelector)
+
+		const selectedPinRect = document.querySelector(`[id='${select.id}'] rect`)
 
 		pinList[select.id].mode = select.value
 
 		if (select.value) {
 			const color = pinList[select.id].modes[select.value].color
+
 			select.style.background = color
 			select.style.color = ''
 			select.style.borderColor = color
+
 			selectedPinRect.style.stroke = color
 			selectedPinWire.style.background = color
 		}
@@ -2003,6 +2006,7 @@
 			select.style.background = ''
 			select.style.color = 'black'
 			select.style.borderColor = ''
+
 			selectedPinRect.style.stroke = ''
 			selectedPinWire.style.background = ''
 		}
@@ -2012,10 +2016,11 @@
 
 	function send(e) {
 		e.preventDefault()
-		console.log(pinList)
 
 		fetch('url', pinList)
 			.then(res => {
+				console.log(pinList)
+
 				if (!res.ok) {
 					alert('Ошибка: ' + res.status)
 				}
