@@ -1889,8 +1889,8 @@
 
 </body>
 <script type="module">
-	import pinList from './data.json' assert { type: "json" }
-
+	const pinList = await fetch('./data.json').then(res => res.json())
+	console.log(pinList)
 	const pinsOnBoard = document.body.querySelectorAll('.pin')
 	const button = document.body.querySelector('.button')
 
